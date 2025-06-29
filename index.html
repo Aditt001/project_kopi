@@ -75,7 +75,21 @@
 
 
 
-
+    <script>Add commentMore actions
+        const navbarNav = document.querySelector('.navbar-nav');
+        const hamburger = document.querySelector('#hamburger-menu');
+      
+        hamburger.addEventListener('click', function () {
+          navbarNav.classList.toggle('active');
+        });
+      
+        // Klik di luar menu, tutup navbar
+        document.addEventListener('click', function (e) {
+          if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+            navbarNav.classList.remove('active');
+          }
+        });
+      </script>
 
 
   </body>
